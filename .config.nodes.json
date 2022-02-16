@@ -420,7 +420,7 @@
                 "local": true,
                 "user": false,
                 "module": "@chatbots-studio/cbs-platform-node-red-palette",
-                "file": "C:\\Users\\Admin\\Desktop\\NODE_RED\\GithubRepo\\Node-red_pet\\bot_orenda_husak\\node_modules\\@chatbots-studio\\cbs-platform-node-red-palette\\custom_nodes\\check_date\\check_date.js"
+                "file": "C:\\Users\\Admin\\Desktop\\Node-red\\GithubRepo\\Node-red_pet\\bot_orenda_husak\\node_modules\\@chatbots-studio\\cbs-platform-node-red-palette\\custom_nodes\\check_date\\check_date.js"
             },
             "check_time": {
                 "name": "check_time",
@@ -431,7 +431,7 @@
                 "local": true,
                 "user": false,
                 "module": "@chatbots-studio/cbs-platform-node-red-palette",
-                "file": "C:\\Users\\Admin\\Desktop\\NODE_RED\\GithubRepo\\Node-red_pet\\bot_orenda_husak\\node_modules\\@chatbots-studio\\cbs-platform-node-red-palette\\custom_nodes\\check_time\\check_time.js"
+                "file": "C:\\Users\\Admin\\Desktop\\Node-red\\GithubRepo\\Node-red_pet\\bot_orenda_husak\\node_modules\\@chatbots-studio\\cbs-platform-node-red-palette\\custom_nodes\\check_time\\check_time.js"
             },
             "check_phone": {
                 "name": "check_phone",
@@ -442,7 +442,7 @@
                 "local": true,
                 "user": false,
                 "module": "@chatbots-studio/cbs-platform-node-red-palette",
-                "file": "C:\\Users\\Admin\\Desktop\\NODE_RED\\GithubRepo\\Node-red_pet\\bot_orenda_husak\\node_modules\\@chatbots-studio\\cbs-platform-node-red-palette\\custom_nodes\\check_phone\\check_phone.js"
+                "file": "C:\\Users\\Admin\\Desktop\\Node-red\\GithubRepo\\Node-red_pet\\bot_orenda_husak\\node_modules\\@chatbots-studio\\cbs-platform-node-red-palette\\custom_nodes\\check_phone\\check_phone.js"
             },
             "check_number": {
                 "name": "check_number",
@@ -453,7 +453,7 @@
                 "local": true,
                 "user": false,
                 "module": "@chatbots-studio/cbs-platform-node-red-palette",
-                "file": "C:\\Users\\Admin\\Desktop\\NODE_RED\\GithubRepo\\Node-red_pet\\bot_orenda_husak\\node_modules\\@chatbots-studio\\cbs-platform-node-red-palette\\custom_nodes\\check_number\\check_number.js"
+                "file": "C:\\Users\\Admin\\Desktop\\Node-red\\GithubRepo\\Node-red_pet\\bot_orenda_husak\\node_modules\\@chatbots-studio\\cbs-platform-node-red-palette\\custom_nodes\\check_number\\check_number.js"
             },
             "check_fractions": {
                 "name": "check_fractions",
@@ -464,7 +464,7 @@
                 "local": true,
                 "user": false,
                 "module": "@chatbots-studio/cbs-platform-node-red-palette",
-                "file": "C:\\Users\\Admin\\Desktop\\NODE_RED\\GithubRepo\\Node-red_pet\\bot_orenda_husak\\node_modules\\@chatbots-studio\\cbs-platform-node-red-palette\\custom_nodes\\check_fractions\\check_fractions.js"
+                "file": "C:\\Users\\Admin\\Desktop\\Node-red\\GithubRepo\\Node-red_pet\\bot_orenda_husak\\node_modules\\@chatbots-studio\\cbs-platform-node-red-palette\\custom_nodes\\check_fractions\\check_fractions.js"
             },
             "check_number_length": {
                 "name": "check_number_length",
@@ -475,7 +475,7 @@
                 "local": true,
                 "user": false,
                 "module": "@chatbots-studio/cbs-platform-node-red-palette",
-                "file": "C:\\Users\\Admin\\Desktop\\NODE_RED\\GithubRepo\\Node-red_pet\\bot_orenda_husak\\node_modules\\@chatbots-studio\\cbs-platform-node-red-palette\\custom_nodes\\check_number_length\\check_number_length.js"
+                "file": "C:\\Users\\Admin\\Desktop\\Node-red\\GithubRepo\\Node-red_pet\\bot_orenda_husak\\node_modules\\@chatbots-studio\\cbs-platform-node-red-palette\\custom_nodes\\check_number_length\\check_number_length.js"
             },
             "check_email": {
                 "name": "check_email",
@@ -486,7 +486,7 @@
                 "local": true,
                 "user": false,
                 "module": "@chatbots-studio/cbs-platform-node-red-palette",
-                "file": "C:\\Users\\Admin\\Desktop\\NODE_RED\\GithubRepo\\Node-red_pet\\bot_orenda_husak\\node_modules\\@chatbots-studio\\cbs-platform-node-red-palette\\custom_nodes\\check_email\\check_email.js"
+                "file": "C:\\Users\\Admin\\Desktop\\Node-red\\GithubRepo\\Node-red_pet\\bot_orenda_husak\\node_modules\\@chatbots-studio\\cbs-platform-node-red-palette\\custom_nodes\\check_email\\check_email.js"
             },
             "find_customer_by_phone": {
                 "name": "find_customer_by_phone",
@@ -497,7 +497,7 @@
                 "local": true,
                 "user": false,
                 "module": "@chatbots-studio/cbs-platform-node-red-palette",
-                "file": "C:\\Users\\Admin\\Desktop\\NODE_RED\\GithubRepo\\Node-red_pet\\bot_orenda_husak\\node_modules\\@chatbots-studio\\cbs-platform-node-red-palette\\custom_nodes\\customer_api\\find_customer_by_phone\\find_customer_by_phone.js"
+                "file": "C:\\Users\\Admin\\Desktop\\Node-red\\GithubRepo\\Node-red_pet\\bot_orenda_husak\\node_modules\\@chatbots-studio\\cbs-platform-node-red-palette\\custom_nodes\\customer_api\\find_customer_by_phone\\find_customer_by_phone.js"
             },
             "get_customer_data": {
                 "name": "get_customer_data",
@@ -508,7 +508,7 @@
                 "local": true,
                 "user": false,
                 "module": "@chatbots-studio/cbs-platform-node-red-palette",
-                "file": "C:\\Users\\Admin\\Desktop\\NODE_RED\\GithubRepo\\Node-red_pet\\bot_orenda_husak\\node_modules\\@chatbots-studio\\cbs-platform-node-red-palette\\custom_nodes\\customer_api\\get_customer_data\\get_customer_data.js"
+                "file": "C:\\Users\\Admin\\Desktop\\Node-red\\GithubRepo\\Node-red_pet\\bot_orenda_husak\\node_modules\\@chatbots-studio\\cbs-platform-node-red-palette\\custom_nodes\\customer_api\\get_customer_data\\get_customer_data.js"
             },
             "send_message": {
                 "name": "send_message",
@@ -519,7 +519,7 @@
                 "local": true,
                 "user": false,
                 "module": "@chatbots-studio/cbs-platform-node-red-palette",
-                "file": "C:\\Users\\Admin\\Desktop\\NODE_RED\\GithubRepo\\Node-red_pet\\bot_orenda_husak\\node_modules\\@chatbots-studio\\cbs-platform-node-red-palette\\custom_nodes\\message_api\\send_message\\send_message.js"
+                "file": "C:\\Users\\Admin\\Desktop\\Node-red\\GithubRepo\\Node-red_pet\\bot_orenda_husak\\node_modules\\@chatbots-studio\\cbs-platform-node-red-palette\\custom_nodes\\message_api\\send_message\\send_message.js"
             },
             "NLP_send_message": {
                 "name": "NLP_send_message",
@@ -530,7 +530,7 @@
                 "local": true,
                 "user": false,
                 "module": "@chatbots-studio/cbs-platform-node-red-palette",
-                "file": "C:\\Users\\Admin\\Desktop\\NODE_RED\\GithubRepo\\Node-red_pet\\bot_orenda_husak\\node_modules\\@chatbots-studio\\cbs-platform-node-red-palette\\custom_nodes\\message_api\\NLP_send_message\\NLP_send_message.js"
+                "file": "C:\\Users\\Admin\\Desktop\\Node-red\\GithubRepo\\Node-red_pet\\bot_orenda_husak\\node_modules\\@chatbots-studio\\cbs-platform-node-red-palette\\custom_nodes\\message_api\\NLP_send_message\\NLP_send_message.js"
             },
             "templates_editor": {
                 "name": "templates_editor",
@@ -541,7 +541,7 @@
                 "local": true,
                 "user": false,
                 "module": "@chatbots-studio/cbs-platform-node-red-palette",
-                "file": "C:\\Users\\Admin\\Desktop\\NODE_RED\\GithubRepo\\Node-red_pet\\bot_orenda_husak\\node_modules\\@chatbots-studio\\cbs-platform-node-red-palette\\custom_nodes\\message_api\\templates_editor\\templates_editor.js"
+                "file": "C:\\Users\\Admin\\Desktop\\Node-red\\GithubRepo\\Node-red_pet\\bot_orenda_husak\\node_modules\\@chatbots-studio\\cbs-platform-node-red-palette\\custom_nodes\\message_api\\templates_editor\\templates_editor.js"
             },
             "update_customer": {
                 "name": "update_customer",
@@ -552,7 +552,7 @@
                 "local": true,
                 "user": false,
                 "module": "@chatbots-studio/cbs-platform-node-red-palette",
-                "file": "C:\\Users\\Admin\\Desktop\\NODE_RED\\GithubRepo\\Node-red_pet\\bot_orenda_husak\\node_modules\\@chatbots-studio\\cbs-platform-node-red-palette\\custom_nodes\\customer_api\\update_customer\\update_customer.js"
+                "file": "C:\\Users\\Admin\\Desktop\\Node-red\\GithubRepo\\Node-red_pet\\bot_orenda_husak\\node_modules\\@chatbots-studio\\cbs-platform-node-red-palette\\custom_nodes\\customer_api\\update_customer\\update_customer.js"
             }
         }
     },
@@ -572,7 +572,7 @@
                 "local": true,
                 "user": false,
                 "module": "node-red-contrib-mongodb4",
-                "file": "C:\\Users\\Admin\\Desktop\\NODE_RED\\GithubRepo\\Node-red_pet\\bot_orenda_husak\\node_modules\\node-red-contrib-mongodb4\\mongodb4\\mongodb4.js"
+                "file": "C:\\Users\\Admin\\Desktop\\Node-red\\GithubRepo\\Node-red_pet\\bot_orenda_husak\\node_modules\\node-red-contrib-mongodb4\\mongodb4\\mongodb4.js"
             }
         }
     }

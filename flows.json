@@ -2127,7 +2127,7 @@
         "type": "function",
         "z": "e2970033cf3e1a5e",
         "name": "env",
-        "func": "let userMessage;\nif (msg.payload.replyType) {\n    if (msg.payload.replyType == 'text') {\n        userMessage = msg.payload.originalBody.message;\n    } else if (msg.payload.replyType == 'callbackQuery') {\n        userMessage = msg.payload.originalBody.callback_query;\n    } else if (msg.payload.replyType == 'inlineQuery') {\n        userMessage = msg.payload.originalBody.inline_query;\n    }\n}\n\nif (userMessage) {\n    msg.firstName = userMessage.from.first_name ? userMessage.from.first_name : \" \";\n    msg.lastName = userMessage.from.last_name ? userMessage.from.last_name : \" \";\n    msg.userName = msg.firstName + ((msg.lastName && msg.lastName != \" \") ? (\" \" + msg.lastName) : '');\n}\n\n\nmsg.customerSettings = JSON.parse(msg.customerSettings);\nmsg.flow = msg.customerSettings.flow ? msg.customerSettings.flow : \"\";\nmsg.descriptionFlow = msg.customerSettings.descriptionFlow ? msg.customerSettings.descriptionFlow : \"\";\n\n\nmsg.version = \"/v1\";\n\nmsg.messageApi = env.get(\"MESSAGES_API_URL\")+msg.version;\nmsg.messageApiKey = env.get(\"MESSAGES_API_KEY\");\nmsg.customerApi =env.get(\"CUSTOMER_API_URL\")+msg.version;\nmsg.customerApiKey = env.get(\"CUSTOMER_API_KEY\");\nmsg.GROUP_ID = env.get(\"GROUP_ID\");\nmsg.groupID=`${msg.companyId}_${msg.botId}_${msg.channel}_${msg.GROUP_ID}`;\n\nmsg.lang = \"uk\";\n\nif(msg.text==\"/start\"){\n    msg.state=null;\n}\n\nreturn msg;",
+        "func": "let userMessage;\nif (msg.payload.replyType) {\n    if (msg.payload.replyType == 'text') {\n        userMessage = msg.payload.originalBody.message;\n    } else if (msg.payload.replyType == 'callbackQuery') {\n        userMessage = msg.payload.originalBody.callback_query;\n    } else if (msg.payload.replyType == 'inlineQuery') {\n        userMessage = msg.payload.originalBody.inline_query;\n    }\n}\n\nif (userMessage) {\n    msg.firstName = userMessage.from.first_name ? userMessage.from.first_name : \" \";\n    msg.lastName = userMessage.from.last_name ? userMessage.from.last_name : \" \";\n    msg.userName = msg.firstName + ((msg.lastName && msg.lastName != \" \") ? (\" \" + msg.lastName) : '');\n}\n\n\nmsg.customerSettings = JSON.parse(msg.customerSettings);\nmsg.flow = msg.customerSettings !=null && msg.customerSettings.flow ? msg.customerSettings.flow : \"\";\nmsg.descriptionFlow = msg.customerSettings != null && msg.customerSettings.descriptionFlow ? msg.customerSettings.descriptionFlow : \"\";\n\n\nmsg.version = \"/v1\";\n\nmsg.messageApi = env.get(\"MESSAGES_API_URL\")+msg.version;\nmsg.messageApiKey = env.get(\"MESSAGES_API_KEY\");\nmsg.customerApi =env.get(\"CUSTOMER_API_URL\")+msg.version;\nmsg.customerApiKey = env.get(\"CUSTOMER_API_KEY\");\nmsg.GROUP_ID = env.get(\"GROUP_ID\");\nmsg.groupID=`${msg.companyId}_${msg.botId}_${msg.channel}_${msg.GROUP_ID}`;\n\nmsg.lang = \"uk\";\n\nif(msg.text==\"/start\"){\n    msg.state=null;\n}\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -4071,7 +4071,11 @@
             "69cc9db4f3a5b1ea",
             "f335b7d7fded0791",
             "94a9040c4fdd41e9",
-            "1ee1c3b8b5d1883e"
+            "1ee1c3b8b5d1883e",
+            "2437b8c26dd36971",
+            "1d27ee0f663a6024",
+            "6b37f253cdaf22ee",
+            "5bd45a0a5c8b7365"
         ],
         "x": 160,
         "y": 140,
@@ -4773,11 +4777,9 @@
             "listParticipants",
             "getListParticipantsError",
             "menuLeaves",
-            "letterPremises",
             "disclaimer",
             "disclaimerConfirm",
             "othersOrder",
-            "rulesQuestionMeasures",
             "rulesQuestionLeaves",
             "dev",
             "getShcool",
@@ -4786,7 +4788,23 @@
             "getDirectorShcool",
             "menuCallCenter",
             "getDirectorError",
+            "rulesQuestionMeasures",
+            "machinery",
+            "furniture",
+            "UPS",
+            "Equipment",
             "menuAuthorities",
+            "actualTab",
+            "payTab",
+            "infoDebt",
+            "upu",
+            "ups",
+            "report",
+            "upn",
+            "upp",
+            "rulesBooking2",
+            "bookingSuccessfull",
+            "rentQuestion",
             "welcomeMessage",
             "getEmail",
             "getEmailError",
@@ -4806,7 +4824,9 @@
             "bookingMakeConfirm",
             "bookingAviableList",
             "viewChart",
+            "feedback",
             "rulesQuestion2",
+            "letterPremises",
             "reporting",
             "pr",
             "fundraising",
@@ -5844,7 +5864,7 @@
                     ]
                 ],
                 "uk": {
-                    "text": "Ознайомтись з правилами бронювання за <a href=\"{{url}}\"> посиланням!</a> \n Ви озноймилися з правилами?",
+                    "text": "Ознайомтись з правилами бронювання за <a href=\"{{url}}\"> посиланням!</a>\nВи озноймилися з правилами?",
                     "callback1": "yes",
                     "callback2": "no",
                     "callbackText1": "Так",
@@ -5859,11 +5879,9 @@
             "listParticipants",
             "getListParticipantsError",
             "menuLeaves",
-            "letterPremises",
             "disclaimer",
             "disclaimerConfirm",
             "othersOrder",
-            "rulesQuestionMeasures",
             "rulesQuestionLeaves",
             "dev",
             "getShcool",
@@ -5872,7 +5890,11 @@
             "getDirectorShcool",
             "menuCallCenter",
             "getDirectorError",
+            "rulesQuestionMeasures",
+            "machinery",
+            "furniture",
             "UPS",
+            "Equipment",
             "menuAuthorities",
             "actualTab",
             "payTab",
@@ -5904,7 +5926,9 @@
             "bookingMakeConfirm",
             "bookingAviableList",
             "viewChart",
+            "feedback",
             "rulesQuestion2",
+            "letterPremises",
             "reporting",
             "pr",
             "fundraising",
@@ -5948,7 +5972,7 @@
         "currentTemplateGroup": "callCenter",
         "currentTemplateTimer": "",
         "currentTemplateType": "standard",
-        "jsonToEdit": "{\"text\":\"{{text}}\",\"inline\":[[{\"callback_data\":\"{{callback1}}\",\"text\":\"{{callbackText1}}\"}],[{\"callback_data\":\"{{callback2}}\",\"text\":\"{{callbackText2}}\"}]],\"uk\":{\"text\":\"Ознайомтись з правилами бронювання за <a href=\\\"{{url}}\\\"> посиланням!</a> \\n Ви озноймилися з правилами?\",\"callback1\":\"yes\",\"callback2\":\"no\",\"callbackText1\":\"Так\",\"callbackText2\":\"Ні\"}}",
+        "jsonToEdit": "{\"text\":\"{{text}}\",\"inline\":[[{\"callback_data\":\"{{callback1}}\",\"text\":\"{{callbackText1}}\"}],[{\"callback_data\":\"{{callback2}}\",\"text\":\"{{callbackText2}}\"}]],\"uk\":{\"text\":\"Ознайомтись з правилами бронювання за <a href=\\\"{{url}}\\\"> посиланням!</a>\\nВи озноймилися з правилами?\",\"callback1\":\"yes\",\"callback2\":\"no\",\"callbackText1\":\"Так\",\"callbackText2\":\"Ні\"}}",
         "jsonToEditType": "json",
         "templateIdToEdit": "rulesQuestion",
         "templateDescriptionButtonsContainerToEdit": [],
@@ -6349,18 +6373,13 @@
                 "vt": "str"
             },
             {
-                "t": "eq",
-                "v": "backMainMenu",
-                "vt": "str"
-            },
-            {
                 "t": "else"
             }
         ],
         "checkall": "false",
         "repair": false,
-        "outputs": 4,
-        "x": 570,
+        "outputs": 3,
+        "x": 610,
         "y": 280,
         "wires": [
             [
@@ -6368,9 +6387,6 @@
             ],
             [
                 "78201fedef91b7af"
-            ],
-            [
-                "7f98ceaed66a7a93"
             ],
             [
                 "0f8bf692e4b77010"
@@ -6400,12 +6416,11 @@
         "links": [
             "6fd119a4d0080ab7"
         ],
-        "x": 140,
-        "y": 560,
+        "x": 100,
+        "y": 340,
         "wires": [
             [
-                "509105b6995c7110",
-                "d7e0552fb0b58f08"
+                "7e30f980b00ab83c"
             ]
         ],
         "l": true
@@ -6857,7 +6872,7 @@
         "links": [
             "b276fb4b7a738312"
         ],
-        "x": 1130,
+        "x": 350,
         "y": 340,
         "wires": [],
         "l": true
@@ -7624,23 +7639,6 @@
             [],
             []
         ]
-    },
-    {
-        "id": "d7e0552fb0b58f08",
-        "type": "debug",
-        "z": "2795a5eda1904556",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "flow",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 160,
-        "y": 520,
-        "wires": []
     },
     {
         "id": "2e4e218a5775de8e",
@@ -8839,6 +8837,37 @@
         ]
     },
     {
+        "id": "7e30f980b00ab83c",
+        "type": "switch",
+        "z": "2795a5eda1904556",
+        "name": "chekExitMenu",
+        "property": "text",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "backMainMenu",
+                "vt": "str"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 2,
+        "x": 180,
+        "y": 440,
+        "wires": [
+            [
+                "7f98ceaed66a7a93"
+            ],
+            [
+                "509105b6995c7110"
+            ]
+        ]
+    },
+    {
         "id": "dd3f146825b31a91",
         "type": "link in",
         "z": "2b75e3d1c32507bd",
@@ -9111,7 +9140,6 @@
             "listParticipants",
             "getListParticipantsError",
             "menuLeaves",
-            "letterPremises",
             "disclaimer",
             "disclaimerConfirm",
             "othersOrder",
@@ -9159,7 +9187,9 @@
             "bookingMakeConfirm",
             "bookingAviableList",
             "viewChart",
+            "feedback",
             "rulesQuestion2",
+            "letterPremises",
             "reporting",
             "pr",
             "fundraising",
@@ -9334,11 +9364,6 @@
             },
             {
                 "t": "eq",
-                "v": "backMainMenu",
-                "vt": "str"
-            },
-            {
-                "t": "eq",
                 "v": "calendar",
                 "vt": "str"
             },
@@ -9353,7 +9378,7 @@
         ],
         "checkall": "false",
         "repair": false,
-        "outputs": 9,
+        "outputs": 8,
         "x": 560,
         "y": 620,
         "wires": [
@@ -9371,9 +9396,6 @@
             ],
             [
                 "3d27781a82580510"
-            ],
-            [
-                "69cc9db4f3a5b1ea"
             ],
             [
                 "73c9d069e2161fa4"
@@ -9826,8 +9848,8 @@
         "checkall": "false",
         "repair": false,
         "outputs": 3,
-        "x": 300,
-        "y": 580,
+        "x": 340,
+        "y": 560,
         "wires": [
             [
                 "cfbf5b43c2e2755a"
@@ -11787,12 +11809,11 @@
         "links": [
             "cc684e6bd6120d2e"
         ],
-        "x": 200,
-        "y": 480,
+        "x": 140,
+        "y": 360,
         "wires": [
             [
-                "58f43490cb49a65c",
-                "35dc00e624b7bcb3"
+                "9910db8106514314"
             ]
         ],
         "l": true
@@ -11807,26 +11828,9 @@
             "dd3f146825b31a91"
         ],
         "x": 760,
-        "y": 1000,
+        "y": 960,
         "wires": [],
         "l": true
-    },
-    {
-        "id": "35dc00e624b7bcb3",
-        "type": "debug",
-        "z": "2b75e3d1c32507bd",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "flow",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 180,
-        "y": 420,
-        "wires": []
     },
     {
         "id": "b007e7a4600a9365",
@@ -11844,20 +11848,6 @@
         "x": 180,
         "y": 100,
         "wires": []
-    },
-    {
-        "id": "69cc9db4f3a5b1ea",
-        "type": "link out",
-        "z": "2b75e3d1c32507bd",
-        "name": "mainMenu",
-        "mode": "link",
-        "links": [
-            "b276fb4b7a738312"
-        ],
-        "x": 790,
-        "y": 920,
-        "wires": [],
-        "l": true
     },
     {
         "id": "515c515827dad9c0",
@@ -12236,6 +12226,51 @@
                 "87bce29137e42cbe"
             ],
             []
+        ]
+    },
+    {
+        "id": "2437b8c26dd36971",
+        "type": "link out",
+        "z": "2b75e3d1c32507bd",
+        "name": "main menu",
+        "mode": "link",
+        "links": [
+            "b276fb4b7a738312"
+        ],
+        "x": 310,
+        "y": 440,
+        "wires": [],
+        "l": true
+    },
+    {
+        "id": "9910db8106514314",
+        "type": "switch",
+        "z": "2b75e3d1c32507bd",
+        "name": "chekExitMenu",
+        "property": "text",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "backMainMenu",
+                "vt": "str"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 2,
+        "x": 140,
+        "y": 500,
+        "wires": [
+            [
+                "2437b8c26dd36971"
+            ],
+            [
+                "58f43490cb49a65c"
+            ]
         ]
     },
     {
@@ -13084,7 +13119,10 @@
             "cbb7f21790a52f68",
             "3fa883e18d57a28f",
             "a8ce9d862fe6888d",
-            "87bce29137e42cbe"
+            "87bce29137e42cbe",
+            "b5212d2b1ddbe5e7",
+            "e5f1115b0f27cb84",
+            "35a533cc18f44f7f"
         ],
         "x": 100,
         "y": 120,
@@ -13104,12 +13142,11 @@
         "links": [
             "5354e88d0bfd35e0"
         ],
-        "x": 180,
-        "y": 740,
+        "x": 100,
+        "y": 720,
         "wires": [
             [
-                "1a9e0c6b9ed10727",
-                "b1cc9a1d5309dc21"
+                "ad922e47fe57be74"
             ]
         ],
         "l": true
@@ -13148,17 +13185,12 @@
                 "vt": "str"
             },
             {
-                "t": "eq",
-                "v": "backMainMenu",
-                "vt": "str"
-            },
-            {
                 "t": "else"
             }
         ],
         "checkall": "false",
         "repair": false,
-        "outputs": 7,
+        "outputs": 6,
         "x": 540,
         "y": 740,
         "wires": [
@@ -13178,10 +13210,7 @@
                 "f182efba1f0a2825"
             ],
             [
-                "f335b7d7fded0791"
-            ],
-            [
-                "cbb7f21790a52f68"
+                "35a533cc18f44f7f"
             ]
         ]
     },
@@ -13708,7 +13737,7 @@
                 "f8d669c8842aab11"
             ],
             [
-                "cbb7f21790a52f68"
+                "e5f1115b0f27cb84"
             ]
         ]
     },
@@ -15206,37 +15235,6 @@
         ]
     },
     {
-        "id": "1a9e0c6b9ed10727",
-        "type": "debug",
-        "z": "c82e79e6decf4986",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "flow",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 140,
-        "y": 700,
-        "wires": []
-    },
-    {
-        "id": "f335b7d7fded0791",
-        "type": "link out",
-        "z": "c82e79e6decf4986",
-        "name": "mainMenu",
-        "mode": "link",
-        "links": [
-            "b276fb4b7a738312"
-        ],
-        "x": 870,
-        "y": 980,
-        "wires": [],
-        "l": true
-    },
-    {
         "id": "776aba3f3ecfd85b",
         "type": "switch",
         "z": "c82e79e6decf4986",
@@ -15992,8 +15990,8 @@
         "links": [
             "ec1f22d9e88b9aaa"
         ],
-        "x": 1110,
-        "y": 580,
+        "x": 750,
+        "y": 520,
         "wires": [],
         "l": true
     },
@@ -16451,7 +16449,7 @@
         "y": 380,
         "wires": [
             [
-                "cbb7f21790a52f68"
+                "b5212d2b1ddbe5e7"
             ],
             []
         ]
@@ -16489,6 +16487,93 @@
         ]
     },
     {
+        "id": "b5212d2b1ddbe5e7",
+        "type": "link out",
+        "z": "c82e79e6decf4986",
+        "name": "menuRent",
+        "mode": "link",
+        "links": [
+            "ec1f22d9e88b9aaa"
+        ],
+        "x": 1450,
+        "y": 380,
+        "wires": [],
+        "l": true
+    },
+    {
+        "id": "e5f1115b0f27cb84",
+        "type": "link out",
+        "z": "c82e79e6decf4986",
+        "name": "menuRent",
+        "mode": "link",
+        "links": [
+            "ec1f22d9e88b9aaa"
+        ],
+        "x": 590,
+        "y": 360,
+        "wires": [],
+        "l": true
+    },
+    {
+        "id": "35a533cc18f44f7f",
+        "type": "link out",
+        "z": "c82e79e6decf4986",
+        "name": "menuRent",
+        "mode": "link",
+        "links": [
+            "ec1f22d9e88b9aaa"
+        ],
+        "x": 870,
+        "y": 960,
+        "wires": [],
+        "l": true
+    },
+    {
+        "id": "1d27ee0f663a6024",
+        "type": "link out",
+        "z": "c82e79e6decf4986",
+        "name": "main menu",
+        "mode": "link",
+        "links": [
+            "b276fb4b7a738312"
+        ],
+        "x": 350,
+        "y": 860,
+        "wires": [],
+        "l": true
+    },
+    {
+        "id": "ad922e47fe57be74",
+        "type": "switch",
+        "z": "c82e79e6decf4986",
+        "name": "chekExitMenu",
+        "property": "text",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "backMainMenu",
+                "vt": "str"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 2,
+        "x": 260,
+        "y": 760,
+        "wires": [
+            [
+                "1d27ee0f663a6024"
+            ],
+            [
+                "b1cc9a1d5309dc21"
+            ]
+        ]
+    },
+    {
         "id": "0a60a66e64a16906",
         "type": "link in",
         "z": "78ff041ef51d46f3",
@@ -16504,7 +16589,8 @@
             "d1b0a9b5c784f86b",
             "17379301963ad32a",
             "f2ad52d1d2320af0",
-            "1ede8a937fd2884d"
+            "1ede8a937fd2884d",
+            "b59cbc6ded9d8308"
         ],
         "x": 160,
         "y": 160,
@@ -18975,17 +19061,12 @@
                 "vt": "str"
             },
             {
-                "t": "eq",
-                "v": "backMainMenu",
-                "vt": "str"
-            },
-            {
                 "t": "else"
             }
         ],
         "checkall": "false",
         "repair": false,
-        "outputs": 6,
+        "outputs": 5,
         "x": 620,
         "y": 460,
         "wires": [
@@ -19000,9 +19081,6 @@
             ],
             [
                 "fa5a5d39ce9277b2"
-            ],
-            [
-                "1ee1c3b8b5d1883e"
             ],
             [
                 "f033d4b08cf023cc"
@@ -19021,8 +19099,7 @@
         "y": 500,
         "wires": [
             [
-                "a6372ba238f39b52",
-                "754e926eaba918e4"
+                "5faa826f8797d099"
             ]
         ],
         "l": true
@@ -19089,20 +19166,6 @@
                 "19f30cd8ddca5ba4"
             ]
         ]
-    },
-    {
-        "id": "1ee1c3b8b5d1883e",
-        "type": "link out",
-        "z": "33605a4b6b5112c9",
-        "name": "main menu",
-        "mode": "link",
-        "links": [
-            "b276fb4b7a738312"
-        ],
-        "x": 910,
-        "y": 620,
-        "wires": [],
-        "l": true
     },
     {
         "id": "9e62c5bd3b586812",
@@ -19507,23 +19570,6 @@
                 "88804c557b8d3f7e"
             ]
         ]
-    },
-    {
-        "id": "754e926eaba918e4",
-        "type": "debug",
-        "z": "33605a4b6b5112c9",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "flow",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 140,
-        "y": 440,
-        "wires": []
     },
     {
         "id": "f66fb1a854dae3b3",
@@ -24632,6 +24678,51 @@
         ]
     },
     {
+        "id": "6b37f253cdaf22ee",
+        "type": "link out",
+        "z": "33605a4b6b5112c9",
+        "name": "main menu",
+        "mode": "link",
+        "links": [
+            "b276fb4b7a738312"
+        ],
+        "x": 310,
+        "y": 300,
+        "wires": [],
+        "l": true
+    },
+    {
+        "id": "5faa826f8797d099",
+        "type": "switch",
+        "z": "33605a4b6b5112c9",
+        "name": "chekExitMenu",
+        "property": "text",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "backMainMenu",
+                "vt": "str"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 2,
+        "x": 140,
+        "y": 400,
+        "wires": [
+            [
+                "6b37f253cdaf22ee"
+            ],
+            [
+                "a6372ba238f39b52"
+            ]
+        ]
+    },
+    {
         "id": "2c456ec0d104ba75",
         "type": "link in",
         "z": "fce982b69dec3829",
@@ -25509,11 +25600,9 @@
             "listParticipants",
             "getListParticipantsError",
             "menuLeaves",
-            "letterPremises",
             "disclaimer",
             "disclaimerConfirm",
             "othersOrder",
-            "rulesQuestionMeasures",
             "rulesQuestionLeaves",
             "dev",
             "getShcool",
@@ -25522,10 +25611,23 @@
             "getDirectorShcool",
             "menuCallCenter",
             "getDirectorError",
+            "rulesQuestionMeasures",
+            "machinery",
+            "furniture",
             "UPS",
-            "ups",
+            "Equipment",
             "menuAuthorities",
             "actualTab",
+            "payTab",
+            "infoDebt",
+            "upu",
+            "ups",
+            "report",
+            "upn",
+            "upp",
+            "rulesBooking2",
+            "bookingSuccessfull",
+            "rentQuestion",
             "welcomeMessage",
             "getEmail",
             "getEmailError",
@@ -25545,7 +25647,9 @@
             "bookingMakeConfirm",
             "bookingAviableList",
             "viewChart",
+            "feedback",
             "rulesQuestion2",
+            "letterPremises",
             "reporting",
             "pr",
             "fundraising",
@@ -25936,17 +26040,34 @@
             "listParticipants",
             "getListParticipantsError",
             "menuLeaves",
-            "letterPremises",
-            "disclaimerConfirm",
             "disclaimer",
+            "disclaimerConfirm",
             "othersOrder",
-            "rulesQuestionMeasures",
             "rulesQuestionLeaves",
+            "dev",
             "getShcool",
             "cancelSchool",
             "getShcoolError",
             "getDirectorShcool",
+            "menuCallCenter",
             "getDirectorError",
+            "rulesQuestionMeasures",
+            "machinery",
+            "furniture",
+            "UPS",
+            "Equipment",
+            "menuAuthorities",
+            "actualTab",
+            "payTab",
+            "infoDebt",
+            "upu",
+            "ups",
+            "report",
+            "upn",
+            "upp",
+            "rulesBooking2",
+            "bookingSuccessfull",
+            "rentQuestion",
             "welcomeMessage",
             "getEmail",
             "getEmailError",
@@ -25955,7 +26076,6 @@
             "getEvent",
             "getEventErrror",
             "welcomeMessage2",
-            "menuCallCenter",
             "recordSuccessаfull",
             "mainMenu",
             "CallCenterChatMessage",
@@ -25967,7 +26087,9 @@
             "bookingMakeConfirm",
             "bookingAviableList",
             "viewChart",
+            "feedback",
             "rulesQuestion2",
+            "letterPremises",
             "reporting",
             "pr",
             "fundraising",
@@ -26044,28 +26166,20 @@
                 "vt": "str"
             },
             {
-                "t": "eq",
-                "v": "back",
-                "vt": "str"
-            },
-            {
                 "t": "else"
             }
         ],
         "checkall": "false",
         "repair": false,
-        "outputs": 4,
-        "x": 540,
-        "y": 300,
+        "outputs": 3,
+        "x": 760,
+        "y": 400,
         "wires": [
             [
                 "cc690dbc5af4c95b"
             ],
             [
                 "95937c2230ac7954"
-            ],
-            [
-                "d1b0a9b5c784f86b"
             ],
             [
                 "d1b0a9b5c784f86b"
@@ -26082,10 +26196,10 @@
             "c264d3755eef42b1"
         ],
         "x": 140,
-        "y": 220,
+        "y": 380,
         "wires": [
             [
-                "e897fd74db155e02"
+                "4705b5e3aa5e5fe3"
             ]
         ],
         "l": true
@@ -26125,8 +26239,8 @@
         "checkall": "false",
         "repair": false,
         "outputs": 5,
-        "x": 180,
-        "y": 340,
+        "x": 400,
+        "y": 440,
         "wires": [
             [
                 "1a4c19fb259f27f0"
@@ -26558,8 +26672,8 @@
         "templateDescriptionButtonsContainerToEdit": [],
         "templateDesciptionDetailsToEdit": "Дмвклеймер, подтверждение",
         "templateDesciptionTextToEdit": "Дмвклеймер, подтверждение",
-        "x": 840,
-        "y": 360,
+        "x": 1060,
+        "y": 460,
         "wires": [
             [],
             [],
@@ -26577,8 +26691,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 420,
-        "y": 460,
+        "x": 640,
+        "y": 560,
         "wires": [
             [
                 "b4b30e5c6c02285e"
@@ -26740,8 +26854,8 @@
         "templateDescriptionButtonsContainerToEdit": [],
         "templateDesciptionDetailsToEdit": "Ошибка, будь-ласка, школа",
         "templateDesciptionTextToEdit": "Ошибка, будь-ласка, школа",
-        "x": 650,
-        "y": 480,
+        "x": 870,
+        "y": 580,
         "wires": [
             [
                 "95937c2230ac7954"
@@ -26761,8 +26875,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 630,
-        "y": 420,
+        "x": 850,
+        "y": 520,
         "wires": [
             [
                 "fd95283d85b0695d"
@@ -26775,8 +26889,8 @@
         "z": "999156daf5ec7db7",
         "name": "",
         "env": [],
-        "x": 900,
-        "y": 420,
+        "x": 1120,
+        "y": 520,
         "wires": [
             [
                 "70ad6fbac3b69e92"
@@ -27206,8 +27320,8 @@
         "templateDescriptionButtonsContainerToEdit": [],
         "templateDesciptionDetailsToEdit": "Дмвклеймер, подтверждение",
         "templateDesciptionTextToEdit": "Дмвклеймер, подтверждение",
-        "x": 860,
-        "y": 580,
+        "x": 1080,
+        "y": 680,
         "wires": [
             [],
             [],
@@ -27225,8 +27339,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 360,
-        "y": 720,
+        "x": 580,
+        "y": 820,
         "wires": [
             [
                 "64582c5ad160198e"
@@ -27398,8 +27512,8 @@
         "templateDescriptionButtonsContainerToEdit": [],
         "templateDesciptionDetailsToEdit": "Ошибка, будь-ласка, школа",
         "templateDesciptionTextToEdit": "Ошибка, будь-ласка, школа",
-        "x": 610,
-        "y": 740,
+        "x": 830,
+        "y": 840,
         "wires": [
             [
                 "70ad6fbac3b69e92"
@@ -27419,8 +27533,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 590,
-        "y": 680,
+        "x": 810,
+        "y": 780,
         "wires": [
             [
                 "4e8699212ec7e8e4"
@@ -27433,8 +27547,8 @@
         "z": "999156daf5ec7db7",
         "name": "",
         "env": [],
-        "x": 840,
-        "y": 680,
+        "x": 1060,
+        "y": 780,
         "wires": [
             [
                 "9d119f97ca27e6ca"
@@ -27451,8 +27565,8 @@
         "links": [
             "0a60a66e64a16906"
         ],
-        "x": 1850,
-        "y": 840,
+        "x": 2070,
+        "y": 940,
         "wires": [],
         "l": true
     },
@@ -27643,8 +27757,8 @@
         "templateDescriptionButtonsContainerToEdit": [],
         "templateDesciptionDetailsToEdit": "Твій запит на лист сформовано. Чекай сповіщення про готовність",
         "templateDesciptionTextToEdit": "Твій запит на лист сформовано. ",
-        "x": 1010,
-        "y": 680,
+        "x": 1230,
+        "y": 780,
         "wires": [
             [
                 "3b267cd94dab7fd8"
@@ -27658,8 +27772,8 @@
         "type": "subflow:f8ba754037da03cf",
         "z": "999156daf5ec7db7",
         "name": "",
-        "x": 1460,
-        "y": 660,
+        "x": 1680,
+        "y": 760,
         "wires": [
             [
                 "8916485077cd64f8"
@@ -27675,8 +27789,8 @@
         "links": [
             "0a60a66e64a16906"
         ],
-        "x": 800,
-        "y": 260,
+        "x": 1020,
+        "y": 360,
         "wires": [],
         "l": true
     },
@@ -27695,8 +27809,8 @@
         "type": "subflow:57076c0e2f94af72",
         "z": "999156daf5ec7db7",
         "name": "",
-        "x": 1760,
-        "y": 760,
+        "x": 1980,
+        "y": 860,
         "wires": [
             [
                 "cce359f6cae758ad"
@@ -27715,8 +27829,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1440,
-        "y": 720,
+        "x": 1660,
+        "y": 820,
         "wires": [
             [
                 "d845b2a6f7dc8882"
@@ -27728,8 +27842,8 @@
         "type": "subflow:dd3dfac28ec929b5",
         "z": "999156daf5ec7db7",
         "name": "",
-        "x": 1600,
-        "y": 720,
+        "x": 1820,
+        "y": 820,
         "wires": [
             [
                 "77066a26dea215ba"
@@ -27747,13 +27861,58 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1230,
-        "y": 660,
+        "x": 1450,
+        "y": 760,
         "wires": [
             [
                 "4271393f9ecdaa45"
             ]
         ]
+    },
+    {
+        "id": "4705b5e3aa5e5fe3",
+        "type": "switch",
+        "z": "999156daf5ec7db7",
+        "name": "chekExitMenu",
+        "property": "text",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "back",
+                "vt": "str"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 2,
+        "x": 320,
+        "y": 300,
+        "wires": [
+            [
+                "b59cbc6ded9d8308"
+            ],
+            [
+                "e897fd74db155e02"
+            ]
+        ]
+    },
+    {
+        "id": "b59cbc6ded9d8308",
+        "type": "link out",
+        "z": "999156daf5ec7db7",
+        "name": "Leaves",
+        "mode": "link",
+        "links": [
+            "0a60a66e64a16906"
+        ],
+        "x": 520,
+        "y": 240,
+        "wires": [],
+        "l": true
     },
     {
         "id": "b266fe6d25ed18e3",
@@ -29375,8 +29534,8 @@
         "links": [
             "0a60a66e64a16906"
         ],
-        "x": 440,
-        "y": 160,
+        "x": 360,
+        "y": 440,
         "wires": [],
         "l": true
     },
